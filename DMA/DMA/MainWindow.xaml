@@ -1,0 +1,60 @@
+﻿<Controls:MetroWindow x:Class="DMA_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:Agenda="clr-namespace:DMA_WPF.Agenda"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        BorderBrush="{DynamicResource AccentColorBrush}"
+        BorderThickness="1"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        Title="Dento Management" MinHeight="600" MinWidth="900" WindowStartupLocation="CenterScreen">
+    <DockPanel LastChildFill="True">
+
+        <!--LATERAL MAIN MENU-->
+
+        <Border BorderBrush="DarkGray" BorderThickness="0, 0, 1, 0" HorizontalAlignment="Left" DockPanel.Dock="Left">
+            <StackPanel x:Name="menuPanel" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="150" Background="{StaticResource BackColorLightGray}" MaxWidth="150" MinWidth="150">
+                <Canvas Background="#FF2344CB" Height="150" Margin="0, 0, 0, 20"></Canvas>
+
+                <Button x:Name="btnAgenda" Style="{StaticResource MenuButtonStyle}" HorizontalContentAlignment="Left">
+                    <StackPanel Orientation="Horizontal" MinWidth="{Binding ActualWidth, ElementName=btnAgenda, Mode=OneWay}" Margin="10,5,0,5">
+                        <fa:ImageAwesome Icon="Calendar" Width="16" Height="16" Foreground="{StaticResource MenuButtonForeColor}" Margin="10,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Agenda" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnPacientes" Style="{StaticResource MenuButtonStyle}">
+                    <StackPanel Orientation="Horizontal" MinWidth="{Binding ActualWidth, ElementName=btnAgenda, Mode=OneWay}" Margin="10,5,0,5">
+                        <fa:ImageAwesome Icon="Users" Width="16" Height="16" Foreground="{StaticResource MenuButtonForeColor}" Margin="10,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Pacientes" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnAdmin" Style="{StaticResource MenuButtonStyle}">
+                    <StackPanel Orientation="Horizontal" MinWidth="{Binding ActualWidth, ElementName=btnAgenda, Mode=OneWay}" Margin="10,5,0,5">
+                        <fa:ImageAwesome Icon="Briefcase"  Width="16" Height="16" Foreground="{StaticResource MenuButtonForeColor}" Margin="10,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Administración" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnConfig" Style="{StaticResource MenuButtonStyle}">
+                    <StackPanel Orientation="Horizontal" MinWidth="{Binding ActualWidth, ElementName=btnAgenda, Mode=OneWay}" Margin="10,5,0,5">
+                        <fa:ImageAwesome Icon="Wrench" Width="16" Height="16" Foreground="{StaticResource MenuButtonForeColor}" Margin="10,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Configuración" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+        <!--TRANSITIONING CONTENT-->
+        <Controls:TransitioningContentControl x:Name="transitioning" MinWidth="640" MinHeight="350" Transition="Left">
+            <Agenda:AgendaUC HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></Agenda:AgendaUC>
+
+        </Controls:TransitioningContentControl>
+    </DockPanel>
+
+</Controls:MetroWindow>

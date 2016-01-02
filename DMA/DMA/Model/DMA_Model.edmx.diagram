@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c258c17451242f7b3ff58084619b14f" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_DMAModel.Appointment" Width="1.5" PointX="7.5144696103010649" PointY="19.099534401250786" />
+        <EntityTypeShape EntityType="DB_DMAModel.Expedientes" Width="1.5" PointX="2.5083044518289643" PointY="6.1099050520499727" />
+        <EntityTypeShape EntityType="DB_DMAModel.Gestion_Info" Width="1.5" PointX="4.688101353444206" PointY="31.779951348798328" />
+        <EntityTypeShape EntityType="DB_DMAModel.Pacientes" Width="1.5" PointX="10.22228694996903" PointY="26.601436985005364" />
+        <EntityTypeShape EntityType="DB_DMAModel.Pagos" Width="1.5" PointX="9.264060263179271" PointY="14.014106086461855" />
+        <EntityTypeShape EntityType="DB_DMAModel.Profile_Images" Width="1.5" PointX="8.59724666206038" PointY="8.37847127410512" />
+        <EntityTypeShape EntityType="DB_DMAModel.Stock_Images" Width="1.5" PointX="3.5906578654379855" PointY="4.4072657844085557" />
+        <EntityTypeShape EntityType="DB_DMAModel.Tratamiento" Width="1.5" PointX="6.44890830034805" PointY="0.081564411558939343" />
+        <AssociationConnector Association="DB_DMAModel.FK_Appointment_Patients" />
+        <AssociationConnector Association="DB_DMAModel.Expediente_Paciente_FK" />
+        <AssociationConnector Association="DB_DMAModel.Pago_Paciente_FK" />
+        <AssociationConnector Association="DB_DMAModel.Profile_Images_Paciente_FK" />
+        <AssociationConnector Association="DB_DMAModel.Stock_Images_Paciente_FK" />
+        <AssociationConnector Association="DB_DMAModel.Tratamiento_Paciente_FK" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

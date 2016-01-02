@@ -1,0 +1,19 @@
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\bin\Debug\MaterializeWPF.exe.config
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\bin\Debug\MaterializeWPF.exe
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\bin\Debug\MaterializeWPF.pdb
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\bin\Debug\MaterialDesignColors.dll
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MaterializeWPF.csprojResolveAssemblyReference.cache
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MainWindow.baml
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\App.baml
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\App.g.cs
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MaterializeWPF_MarkupCompile.cache
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MaterializeWPF.g.resources
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MaterializeWPF.Properties.Resources.resources
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MaterializeWPF.csproj.GenerateResource.Cache
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MaterializeWPF.exe
+C:\Users\Eliud\Documents\Visual Studio 2012\Projects\MaterializeWPF\MaterializeWPF\obj\Debug\MaterializeWPF.pdb
+E:\Projects\DMA\DMA\DMA\bin\Debug\MaterializeWPF.exe.config
+E:\Projects\DMA\DMA\DMA\obj\Debug\MaterializeWPF.exe
+E:\Projects\DMA\DMA\DMA\obj\Debug\MaterializeWPF.pdb

@@ -1,0 +1,23 @@
+Header checksum is valid.
+Source      : E:\Projects\DMA\DataBase\DMA_DB.sdf
+Destination : C:\Windows\system32\DMA_DB_REC
+Repairing - verMajor: 4, verMinor: 0, verBuild: 8876, verPoint: 1
+Time - 2015-19-12 23:22:56.741
+
+Header checksum is valid.
+Source      : E:\Projects\DMA\DataBase\DMA_DB.sdf
+Destination : E:\Projects\DMA\DataBase\DMA_DB.sdf.D2B1A1B.tmp
+Repairing - verMajor: 4, verMinor: 0, verBuild: 8876, verPoint: 1
+Time - 2015-19-12 23:23:22.346
+
+ All Pages have valid checksum.
+Parse the db file and build list of tables ... DONE.
+Cleanup Page list ... DONE.
+Scan bad pages ... DONE.
+Parse SysObjects table ... DONE.
+Copy Schema ... DONE.
+Copy Tables ... DONE.
+Copy Constraints ... DONE.
+Copy Indexes ... DONE.
+Copy Constraints ... DONE.
+

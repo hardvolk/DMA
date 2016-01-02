@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_DMAModelStoreContainer" CdmEntityContainer="DB_DMAEntities">
+    <EntitySetMapping Name="Appointment">
+      <EntityTypeMapping TypeName="DB_DMAModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="TimeEnd" ColumnName="TimeEnd" />
+          <ScalarProperty Name="TimeStart" ColumnName="TimeStart" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="AppointmentID" ColumnName="AppointmentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expedientes">
+      <EntityTypeMapping TypeName="DB_DMAModel.Expedientes">
+        <MappingFragment StoreEntitySet="Expedientes">
+          <ScalarProperty Name="Enfermedades" ColumnName="Enfermedades" />
+          <ScalarProperty Name="Motivo_Consulta" ColumnName="Motivo_Consulta" />
+          <ScalarProperty Name="PacienteID" ColumnName="PacienteID" />
+          <ScalarProperty Name="ExpedienteID" ColumnName="ExpedienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gestion_Info">
+      <EntityTypeMapping TypeName="DB_DMAModel.Gestion_Info">
+        <MappingFragment StoreEntitySet="Gestion_Info">
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Gestion_InfoID" ColumnName="Gestion_InfoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pacientes">
+      <EntityTypeMapping TypeName="DB_DMAModel.Pacientes">
+        <MappingFragment StoreEntitySet="Pacientes">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="Alta" ColumnName="Alta" />
+          <ScalarProperty Name="Nombre_Tutor" ColumnName="Nombre_Tutor" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Ocupacion" ColumnName="Ocupacion" />
+          <ScalarProperty Name="Estado_Civil" ColumnName="Estado_Civil" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PacienteID" ColumnName="PacienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pagos">
+      <EntityTypeMapping TypeName="DB_DMAModel.Pagos">
+        <MappingFragment StoreEntitySet="Pagos">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="PacienteID" ColumnName="PacienteID" />
+          <ScalarProperty Name="PagoID" ColumnName="PagoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profile_Images">
+      <EntityTypeMapping TypeName="DB_DMAModel.Profile_Images">
+        <MappingFragment StoreEntitySet="Profile_Images">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="PacienteID" ColumnName="PacienteID" />
+          <ScalarProperty Name="Profile_ImagesID" ColumnName="Profile_ImagesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock_Images">
+      <EntityTypeMapping TypeName="DB_DMAModel.Stock_Images">
+        <MappingFragment StoreEntitySet="Stock_Images">
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PacienteID" ColumnName="PacienteID" />
+          <ScalarProperty Name="Stock_ImagesID" ColumnName="Stock_ImagesID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tratamiento">
+      <EntityTypeMapping TypeName="DB_DMAModel.Tratamiento">
+        <MappingFragment StoreEntitySet="Tratamiento">
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Num_Diente" ColumnName="Num_Diente" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="PacienteID" ColumnName="PacienteID" />
+          <ScalarProperty Name="TratamientoID" ColumnName="TratamientoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DMA_DBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DMA_DBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Agenda" EntityType="DMA_DBModel.Agenda" />
+    <EntitySet Name="Expedientes" EntityType="DMA_DBModel.Expedientes" />
+    <EntitySet Name="Gestion_Info" EntityType="DMA_DBModel.Gestion_Info" />
+    <EntitySet Name="Pacientes" EntityType="DMA_DBModel.Pacientes" />
+    <EntitySet Name="Pagos" EntityType="DMA_DBModel.Pagos" />
+    <EntitySet Name="Profile_Images" EntityType="DMA_DBModel.Profile_Images" />
+    <EntitySet Name="Stock_Images" EntityType="DMA_DBModel.Stock_Images" />
+    <EntitySet Name="Tratamiento" EntityType="DMA_DBModel.Tratamiento" />
+    <AssociationSet Name="Agenda_Paciente_FK" Association="DMA_DBModel.Agenda_Paciente_FK">
+      <End Role="Pacientes" EntitySet="Pacientes" />
+      <End Role="Agenda" EntitySet="Agenda" />
+    </AssociationSet>
+    <AssociationSet Name="Expediente_Paciente_FK" Association="DMA_DBModel.Expediente_Paciente_FK">
+      <End Role="Pacientes" EntitySet="Pacientes" />
+      <End Role="Expedientes" EntitySet="Expedientes" />
+    </AssociationSet>
+    <AssociationSet Name="Pago_Paciente_FK" Association="DMA_DBModel.Pago_Paciente_FK">
+      <End Role="Pacientes" EntitySet="Pacientes" />
+      <End Role="Pagos" EntitySet="Pagos" />
+    </AssociationSet>
+    <AssociationSet Name="Profile_Images_Paciente_FK" Association="DMA_DBModel.Profile_Images_Paciente_FK">
+      <End Role="Pacientes" EntitySet="Pacientes" />
+      <End Role="Profile_Images" EntitySet="Profile_Images" />
+    </AssociationSet>
+    <AssociationSet Name="Stock_Images_Paciente_FK" Association="DMA_DBModel.Stock_Images_Paciente_FK">
+      <End Role="Pacientes" EntitySet="Pacientes" />
+      <End Role="Stock_Images" EntitySet="Stock_Images" />
+    </AssociationSet>
+    <AssociationSet Name="Tratamiento_Paciente_FK" Association="DMA_DBModel.Tratamiento_Paciente_FK">
+      <End Role="Pacientes" EntitySet="Pacientes" />
+      <End Role="Tratamiento" EntitySet="Tratamiento" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agenda">
+    <Key>
+      <PropertyRef Name="AgendaID" />
+    </Key>
+    <Property Type="Int32" Name="AgendaID" Nullable="false" />
+    <Property Type="Int32" Name="PacienteID" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Hora_Inicio" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="Hora_Fin" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Pacientes" Relationship="DMA_DBModel.Agenda_Paciente_FK" FromRole="Agenda" ToRole="Pacientes" />
+  </EntityType>
+  <EntityType Name="Expedientes">
+    <Key>
+      <PropertyRef Name="ExpedienteID" />
+    </Key>
+    <Property Type="Int32" Name="ExpedienteID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PacienteID" Nullable="false" />
+    <Property Type="String" Name="Motivo_Consulta" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Enfermedades" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Pacientes" Relationship="DMA_DBModel.Expediente_Paciente_FK" FromRole="Expedientes" ToRole="Pacientes" />
+  </EntityType>
+  <EntityType Name="Gestion_Info">
+    <Key>
+      <PropertyRef Name="Gestion_InfoID" />
+    </Key>
+    <Property Type="Guid" Name="Gestion_InfoID" Nullable="false" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Razon_Social" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Telefono" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Direccion" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Pacientes">
+    <Key>
+      <PropertyRef Name="PacienteID" />
+    </Key>
+    <Property Type="Int32" Name="PacienteID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nombre" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Edad" Nullable="false" />
+    <Property Type="DateTime" Name="Fecha_Nacimiento" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Sexo" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Estado_Civil" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Ocupacion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Telefono" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Direccion" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nombre_Tutor" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Alta" Nullable="false" Precision="3" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="Agenda" Relationship="DMA_DBModel.Agenda_Paciente_FK" FromRole="Pacientes" ToRole="Agenda" />
+    <NavigationProperty Name="Expedientes" Relationship="DMA_DBModel.Expediente_Paciente_FK" FromRole="Pacientes" ToRole="Expedientes" />
+    <NavigationProperty Name="Pagos" Relationship="DMA_DBModel.Pago_Paciente_FK" FromRole="Pacientes" ToRole="Pagos" />
+    <NavigationProperty Name="Profile_Images" Relationship="DMA_DBModel.Profile_Images_Paciente_FK" FromRole="Pacientes" ToRole="Profile_Images" />
+    <NavigationProperty Name="Stock_Images" Relationship="DMA_DBModel.Stock_Images_Paciente_FK" FromRole="Pacientes" ToRole="Stock_Images" />
+    <NavigationProperty Name="Tratamiento" Relationship="DMA_DBModel.Tratamiento_Paciente_FK" FromRole="Pacientes" ToRole="Tratamiento" />
+  </EntityType>
+  <EntityType Name="Pagos">
+    <Key>
+      <PropertyRef Name="PagoID" />
+    </Key>
+    <Property Type="Int32" Name="PagoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PacienteID" />
+    <Property Type="String" Name="Concepto" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Monto" Nullable="false" Precision="19" Scale="4" />
+    <Property Type="DateTime" Name="Fecha" Precision="3" />
+    <NavigationProperty Name="Pacientes" Relationship="DMA_DBModel.Pago_Paciente_FK" FromRole="Pagos" ToRole="Pacientes" />
+  </EntityType>
+  <EntityType Name="Profile_Images">
+    <Key>
+      <PropertyRef Name="Profile_ImagesID" />
+    </Key>
+    <Property Type="Int32" Name="Profile_ImagesID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PacienteID" Nullable="false" />
+    <Property Type="Binary" Name="Image" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Pacientes" Relationship="DMA_DBModel.Profile_Images_Paciente_FK" FromRole="Profile_Images" ToRole="Pacientes" />
+  </EntityType>
+  <EntityType Name="Stock_Images">
+    <Key>
+      <PropertyRef Name="Stock_ImagesID" />
+    </Key>
+    <Property Type="Int32" Name="Stock_ImagesID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PacienteID" Nullable="false" />
+    <Property Type="String" Name="Path" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Pacientes" Relationship="DMA_DBModel.Stock_Images_Paciente_FK" FromRole="Stock_Images" ToRole="Pacientes" />
+  </EntityType>
+  <EntityType Name="Tratamiento">
+    <Key>
+      <PropertyRef Name="TratamientoID" />
+    </Key>
+    <Property Type="Int32" Name="TratamientoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PacienteID" Nullable="false" />
+    <Property Type="String" Name="Nota" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Num_Diente" />
+    <Property Type="DateTime" Name="Fecha" Precision="3" />
+    <NavigationProperty Name="Pacientes" Relationship="DMA_DBModel.Tratamiento_Paciente_FK" FromRole="Tratamiento" ToRole="Pacientes" />
+  </EntityType>
+  <Association Name="Agenda_Paciente_FK">
+    <End Type="DMA_DBModel.Pacientes" Role="Pacientes" Multiplicity="0..1" />
+    <End Type="DMA_DBModel.Agenda" Role="Agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pacientes">
+        <PropertyRef Name="PacienteID" />
+      </Principal>
+      <Dependent Role="Agenda">
+        <PropertyRef Name="PacienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Expediente_Paciente_FK">
+    <End Type="DMA_DBModel.Pacientes" Role="Pacientes" Multiplicity="1" />
+    <End Type="DMA_DBModel.Expedientes" Role="Expedientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pacientes">
+        <PropertyRef Name="PacienteID" />
+      </Principal>
+      <Dependent Role="Expedientes">
+        <PropertyRef Name="PacienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Pago_Paciente_FK">
+    <End Type="DMA_DBModel.Pacientes" Role="Pacientes" Multiplicity="0..1" />
+    <End Type="DMA_DBModel.Pagos" Role="Pagos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pacientes">
+        <PropertyRef Name="PacienteID" />
+      </Principal>
+      <Dependent Role="Pagos">
+        <PropertyRef Name="PacienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Profile_Images_Paciente_FK">
+    <End Type="DMA_DBModel.Pacientes" Role="Pacientes" Multiplicity="1" />
+    <End Type="DMA_DBModel.Profile_Images" Role="Profile_Images" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pacientes">
+        <PropertyRef Name="PacienteID" />
+      </Principal>
+      <Dependent Role="Profile_Images">
+        <PropertyRef Name="PacienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Stock_Images_Paciente_FK">
+    <End Type="DMA_DBModel.Pacientes" Role="Pacientes" Multiplicity="1" />
+    <End Type="DMA_DBModel.Stock_Images" Role="Stock_Images" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pacientes">
+        <PropertyRef Name="PacienteID" />
+      </Principal>
+      <Dependent Role="Stock_Images">
+        <PropertyRef Name="PacienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Tratamiento_Paciente_FK">
+    <End Type="DMA_DBModel.Pacientes" Role="Pacientes" Multiplicity="1" />
+    <End Type="DMA_DBModel.Tratamiento" Role="Tratamiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pacientes">
+        <PropertyRef Name="PacienteID" />
+      </Principal>
+      <Dependent Role="Tratamiento">
+        <PropertyRef Name="PacienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
